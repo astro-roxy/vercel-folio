@@ -20,9 +20,8 @@ export function renderGallery() {
     <div class="section-head">
       <div>
         <span class="eyebrow">In the field</span>
-        <h2 class="section-title" data-reveal-lines>${line('Moments')} ${line('under the sky.')}</h2>
+        <h2 class="section-title" data-reveal-lines>${line('Moments under the sky.')}</h2>
       </div>
-      <span class="section-index">Astrocamps · shows · classrooms · stargazing</span>
     </div>
     <div class="mosaic">${tiles}</div>
   </section>`

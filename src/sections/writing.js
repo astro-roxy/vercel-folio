@@ -19,9 +19,8 @@ export function renderWriting() {
     <div class="section-head">
       <div>
         <span class="eyebrow">Writing</span>
-        <h2 class="section-title" data-reveal-lines>${line('Words for')} ${line('the curious.')}</h2>
+        <h2 class="section-title" data-reveal-lines>${line('Words for the curious.')}</h2>
       </div>
-      <span class="section-index">03 · Articles & features</span>
     </div>
     <div class="writing-list">${rows}</div>
   </section>`

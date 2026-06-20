@@ -11,9 +11,8 @@ export function renderAbout() {
     <div class="section-head">
       <div>
         <span class="eyebrow">About</span>
-        <h2 class="section-title" data-reveal-lines>${line('The person')} ${line('behind the telescope.')}</h2>
+        <h2 class="section-title" data-reveal-lines>${line('The person behind the telescope.')}</h2>
       </div>
-      <span class="section-index">05 · Personal</span>
     </div>
 
     <div class="about-grid">

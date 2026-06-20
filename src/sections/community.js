@@ -18,9 +18,8 @@ export function renderCommunity() {
       <div class="section-head">
         <div>
           <span class="eyebrow">Community</span>
-          <h2 class="section-title" data-reveal-lines>${line('Giving the sky')} ${line('back to everyone.')}</h2>
+          <h2 class="section-title" data-reveal-lines>${line('Giving the sky back to everyone.')}</h2>
         </div>
-        <span class="section-index">06 · Volunteering & outreach</span>
       </div>
       <div class="vol-grid">${items}</div>
     </div>

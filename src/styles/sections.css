@@ -497,9 +497,9 @@ html.js .accolades__grid { opacity: 0; }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: clamp(1rem, 3vw, 2.4rem);
-  margin-bottom: clamp(3rem, 6vw, 5rem);
+  margin-bottom: clamp(2.6rem, 5vw, 4rem);
 }
-.stat { border-top: 1px solid var(--line-strong); padding-top: 1.2rem; }
+.stat { padding-top: 0.2rem; }
 .stat__num {
   font-family: var(--serif);
   font-size: clamp(2.2rem, 4.6vw, 3.6rem);
@@ -647,6 +647,16 @@ html.js .accolades__grid { opacity: 0; }
 }
 .videogroup__title { font-family: var(--serif); font-size: var(--fs-h3); }
 .videogroup__blurb { font-size: var(--fs-sm); color: var(--faint); }
+.videogroup__cta {
+  display: inline-block;
+  margin-top: 1.1rem;
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+.videogroup__cta:hover { color: var(--text); }
 .videogrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr));
@@ -695,11 +705,24 @@ html.js .accolades__grid { opacity: 0; }
 .vcard__text { padding: 0.9rem 1rem 1.1rem; }
 .vcard__title { font-family: var(--serif); font-size: 1.12rem; line-height: 1.12; }
 .vcard__with { margin-top: 0.4rem; font-size: var(--fs-sm); color: var(--faint); }
+.vcard__label {
+  position: absolute;
+  bottom: 0.7rem;
+  left: 0.7rem;
+  font-size: 0.58rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.5rem;
+  border-radius: 100px;
+  font-weight: 600;
+}
+.vcard__label--creator { background: rgba(120, 80, 220, 0.75); color: #e8d9ff; }
+.vcard__label--brand   { background: rgba(200, 140, 40, 0.75); color: #fff3d0; }
 
 .vlinks { margin-top: 1.2rem; border-top: 1px solid var(--line); }
 .vlink {
   display: grid;
-  grid-template-columns: 1.4fr 1fr auto;
+  grid-template-columns: 1.4fr 1fr auto auto;
   align-items: center;
   gap: 1.5rem;
   padding: 1rem 0;
@@ -709,6 +732,17 @@ html.js .accolades__grid { opacity: 0; }
 .vlink:hover { padding-left: 0.5rem; }
 .vlink__title { font-family: var(--serif); font-size: clamp(1.1rem, 1.7vw, 1.4rem); line-height: 1.1; }
 .vlink__with { font-size: var(--fs-sm); color: var(--faint); }
+.vlink__label {
+  font-size: 0.58rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.55rem;
+  border-radius: 100px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.vlink__label--creator { background: rgba(120, 80, 220, 0.2); color: #c4a8ff; border: 1px solid rgba(120, 80, 220, 0.4); }
+.vlink__label--brand   { background: rgba(200, 140, 40, 0.2); color: #f0c97a; border: 1px solid rgba(200, 140, 40, 0.4); }
 .vlink__arrow { font-size: 1.2rem; color: var(--muted); }
 
 /* =========================================================
@@ -989,7 +1023,7 @@ html.js .accolades__grid { opacity: 0; }
   .role { grid-template-columns: 1fr; gap: 0.4rem; }
   .warticle { grid-template-columns: 1fr auto; gap: 0.4rem 1rem; }
   .warticle__blurb { display: none; }
-  .vlink { grid-template-columns: 1fr auto; }
+  .vlink { grid-template-columns: 1fr auto auto; }
   .vlink__with { display: none; }
   .mosaic { grid-template-columns: repeat(2, 1fr); }
   .tile { grid-column: span 1 !important; }

@@ -32,9 +32,8 @@ export function renderSpeaking() {
       <div class="section-head">
         <div>
           <span class="eyebrow">Speaking</span>
-          <h2 class="section-title" data-reveal-lines>${line('On mics')} ${line('&amp; on stage.')}</h2>
+          <h2 class="section-title" data-reveal-lines>${line('On mics &amp; on stage.')}</h2>
         </div>
-        <span class="section-index">04 · Podcasts & talks</span>
       </div>
       <div class="speaking-grid">
         <div class="podcasts">

@@ -280,7 +280,8 @@ main {
 .section-title {
   font-size: var(--fs-h2);
   margin-top: 0.9rem;
-  max-width: 18ch;
+  max-width: none;
+  white-space: nowrap;
 }
 .section-index {
   font-family: var(--sans);
@@ -292,4 +293,6 @@ main {
 @media (max-width: 860px) {
   .nav { display: none; }
   .menu-toggle { display: flex; }
+  /* On phones the titles are too long for one line — let them wrap naturally. */
+  .section-title { white-space: normal; }
 }

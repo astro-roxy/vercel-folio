@@ -31,9 +31,9 @@ export const profile = {
 }
 
 export const stats = [
-  { value: 47000, suffix: '+', label: 'Followers reached' },
+  { value: 47, unit: 'K', suffix: '+', label: 'Followers reached' },
   { value: 500, suffix: '+', label: 'Posts, films & articles' },
-  { value: 350000, suffix: '+', label: 'Views on “3030 Eklavya”' },
+  { value: 350, unit: 'K', suffix: '+', label: 'Views on “3030 Eklavya”' },
   { value: 170, suffix: '+', label: 'Schools engaged' },
 ]
 
@@ -206,35 +206,29 @@ const T = '/assets/thumbs/'
 export const videoGroups = [
   {
     title: 'Collaborations',
-    blurb: 'Made with fellow communicators and scientists around the world.',
+    blurb: 'Made with fellow communicators, scientists, brands and institutions.',
     items: [
-      { title: 'Playing a science board game', with: 'w/ planetary scientist Alissa Pott', url: 'https://www.instagram.com/astro_roxy/reel/DYrlAoasM21/', thumb: T + 'board-game.jpg' },
-      { title: 'India lands on the Moon!', with: "w/ The Planetary Society's Ambre Rosario", url: 'https://www.instagram.com/reel/CwT3t3itYRU/', thumb: T + 'moon-landing.jpg' },
-      { title: 'How do satellites find your location?', with: 'w/ Noemi Marsico', url: 'https://www.instagram.com/reel/Ch2UDLNjvHY/', thumb: T + 'satellites.jpg' },
-    ],
-  },
-  {
-    title: 'Brand collaborations',
-    blurb: 'Space storytelling for brands and institutions.',
-    items: [
-      { title: 'Axiom-4: U.S.–India beyond Earth', with: 'U.S. Consulate General', url: 'https://www.instagram.com/reel/DMplzF7g2dS/', thumb: T + 'axiom4.jpg' },
+      { label: 'Creator', title: 'Playing a science board game', with: 'w/ planetary scientist Alissa Pott', url: 'https://www.instagram.com/astro_roxy/reel/DYrlAoasM21/', thumb: T + 'board-game.jpg' },
+      { label: 'Creator', title: 'India lands on the Moon!', with: "w/ The Planetary Society's Ambre Rosario", url: 'https://www.instagram.com/reel/CwT3t3itYRU/', thumb: T + 'moon-landing.jpg' },
+      { label: 'Creator', title: 'How do satellites find your location?', with: 'w/ Noemi Marsico', url: 'https://www.instagram.com/reel/Ch2UDLNjvHY/', thumb: T + 'satellites.jpg' },
+      { label: 'Brand', title: 'Axiom-4: U.S.–India beyond Earth', with: 'U.S. Consulate General', url: 'https://www.instagram.com/reel/DMplzF7g2dS/', thumb: T + 'axiom4.jpg' },
     ],
     links: [
-      { title: 'Apollena', with: 'Colors TV India', url: 'https://www.instagram.com/reel/DC_tBxANfOx/' },
-      { title: "Bose's Doodle", with: 'Google India', url: 'https://www.instagram.com/p/CeXlCFuJLXo/' },
-      { title: 'Test in Space', with: 'Nerolac Paints', url: 'https://www.instagram.com/astro_roxy/reel/DZfGqLNsB9-/' },
+      { label: 'Brand', title: 'Apollena', with: 'Colors TV India', url: 'https://www.instagram.com/reel/DC_tBxANfOx/' },
+      { label: 'Brand', title: "Bose's Doodle", with: 'Google India', url: 'https://www.instagram.com/p/CeXlCFuJLXo/' },
+      { label: 'Brand', title: 'Test in Space', with: 'Nerolac Paints', url: 'https://www.instagram.com/astro_roxy/reel/DZfGqLNsB9-/' },
     ],
   },
   {
     title: 'Shorts & explainers',
     blurb: 'Bite-sized wonder.',
+    cta: { label: 'More on Instagram', url: 'https://www.instagram.com/astro_roxy/' },
     items: [
       { title: 'If You Put Saturn in Water, It Would Float', with: 'Short', url: 'https://www.instagram.com/reel/CZt1uAVpxww/', thumb: T + 'saturn.jpg' },
       { title: 'Why Do Stars Twinkle?', with: 'Short', url: 'https://www.instagram.com/reel/Cw8KXypMl7N/', thumb: T + 'stars-twinkle.jpg' },
       { title: 'Astronomy & Raksha Bandhan', with: 'Short', url: 'https://www.instagram.com/reel/DNIt0imMqCv/', thumb: T + 'raksha-bandhan.jpg' },
       { title: 'How to Become an Astronomer', with: 'Short', url: 'https://www.instagram.com/astro_roxy/reel/Cs37MfUMrAd/', thumb: T + 'become-astronomer.jpg' },
-      { title: 'You Have to See This Experiment', with: 'Short', url: 'https://www.instagram.com/astro_roxy/', thumb: T + 'experiment.jpg' },
-      { title: "India's First Female Astronaut", with: 'Short', url: 'https://www.instagram.com/astro_roxy/', thumb: T + 'female-astronaut.jpg' },
+      { title: 'You Have to See This Experiment', with: 'Short', url: 'https://www.instagram.com/astro_roxy/reel/DZfGqLNsB9-/', thumb: T + 'experiment.jpg' },
     ],
   },
   {

@@ -36,9 +36,8 @@ export function renderEducation() {
       <div class="section-head">
         <div>
           <span class="eyebrow">Education</span>
-          <h2 class="section-title" data-reveal-lines>${line('How I learned')} ${line('to translate.')}</h2>
+          <h2 class="section-title" data-reveal-lines>${line('How I learned to translate.')}</h2>
         </div>
-        <span class="section-index">Degrees · coursework · training</span>
       </div>
 
       <div class="degrees">${degrees}</div>

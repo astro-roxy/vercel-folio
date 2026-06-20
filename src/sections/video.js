@@ -8,12 +8,16 @@ function platform(url) {
 }
 
 function card(it) {
+  const labelBadge = it.label
+    ? `<span class="vcard__label vcard__label--${it.label.toLowerCase()}">${it.label}</span>`
+    : ''
   return `
     <a class="vcard" href="${it.url}" target="_blank" rel="noopener" data-reveal>
       <div class="vcard__media">
         <img src="${it.thumb}" alt="${it.title}" loading="lazy" width="288" height="512" />
         <span class="vcard__play" aria-hidden="true">▶</span>
         <span class="vcard__platform">${platform(it.url)}</span>
+        ${labelBadge}
       </div>
       <div class="vcard__text">
         <div class="vcard__title">${it.title}</div>
@@ -23,10 +27,14 @@ function card(it) {
 }
 
 function linkRow(it) {
+  const labelBadge = it.label
+    ? `<span class="vlink__label vlink__label--${it.label.toLowerCase()}">${it.label}</span>`
+    : ''
   return `
     <a class="vlink" href="${it.url}" target="_blank" rel="noopener" data-reveal>
       <span class="vlink__title">${it.title}</span>
       <span class="vlink__with">${it.with}</span>
+      ${labelBadge}
       <span class="vlink__arrow" aria-hidden="true">↗</span>
     </a>`
 }
@@ -40,6 +48,11 @@ export function renderVideo() {
       const links = g.links?.length
         ? `<div class="vlinks">${g.links.map(linkRow).join('')}</div>`
         : ''
+      const cta = g.cta
+        ? `<a class="videogroup__cta" href="${g.cta.url}" target="_blank" rel="noopener">
+            ${g.cta.label} ↗
+          </a>`
+        : ''
       return `
       <div class="videogroup">
         <div class="videogroup__head" data-reveal>
@@ -48,6 +61,7 @@ export function renderVideo() {
         </div>
         ${grid}
         ${links}
+        ${cta}
       </div>`
     })
     .join('')
@@ -58,9 +72,8 @@ export function renderVideo() {
       <div class="section-head">
         <div>
           <span class="eyebrow">Video</span>
-          <h2 class="section-title" data-reveal-lines>${line('My largest')} ${line('body of work.')}</h2>
+          <h2 class="section-title" data-reveal-lines>${line('My largest body of work.')}</h2>
         </div>
-        <span class="section-index">02 · Film & reels</span>
       </div>
       ${groups}
     </div>

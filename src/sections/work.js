@@ -6,7 +6,7 @@ export function renderWork() {
     .map(
       (s) => `
       <div class="stat" data-reveal>
-        <div class="stat__num"><span data-counter="${s.value}">0</span><span class="suffix">${s.suffix}</span></div>
+        <div class="stat__num"><span data-counter="${s.value}">0</span>${s.unit ? `<span class="unit">${s.unit}</span>` : ''}<span class="suffix">${s.suffix}</span></div>
         <div class="stat__label">${s.label}</div>
       </div>`
     )
@@ -34,15 +34,14 @@ export function renderWork() {
 
   return `
   <section class="section" id="work">
+    <div class="stats">${statCells}</div>
+
     <div class="section-head">
       <div>
         <span class="eyebrow">Experience</span>
-        <h2 class="section-title" data-reveal-lines>${line('A life spent')} ${line('translating the sky.')}</h2>
+        <h2 class="section-title" data-reveal-lines>${line('A life spent translating the sky.')}</h2>
       </div>
-      <span class="section-index">01 · Selected roles · 2018–now</span>
     </div>
-
-    <div class="stats">${statCells}</div>
 
     <div class="timeline">
       <span class="timeline__progress"></span>
