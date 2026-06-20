@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#07070a" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <title>Astro Roxy — Rashmi Sheoran · Astronomer & Science Communicator</title>
+    <meta
+      name="description"
+      content="Rashmi (Astro Roxy) is an astronomer and science communicator based in Nuremberg, Germany — turning space science into stories across video, film, writing and the stage, in Hindi, English and German."
+    />
+    <meta name="author" content="Rashmi Sheoran (Astro Roxy)" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Astro Roxy — Rashmi Sheoran" />
+    <meta
+      property="og:description"
+      content="Astronomer & science communicator in Nuremberg, telling stories of the cosmos in three languages."
+    />
+    <meta property="og:image" content="/assets/og.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Fonts: Zodiak (display serif) + Satoshi (sans) via Fontshare; Noto Serif Devanagari for Hindi -->
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=zodiak@300,400,500,700&f[]=satoshi@400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#work">Skip to content</a>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <div class="preloader__inner">
+        <span class="preloader__label">Astro Roxy</span>
+        <span class="preloader__count" id="preloaderCount">00</span>
+      </div>
+    </div>
+
+    <!-- Subtle grain -->
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- Custom cursor -->
+    <div class="cursor" id="cursor" aria-hidden="true">
+      <div class="cursor__dot"></div>
+      <div class="cursor__ring"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header" id="header">
+      <a class="brand" href="#top" data-magnetic>
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__name">Astro&nbsp;Roxy</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="#work" data-nav>Work</a>
+        <a href="#video" data-nav>Video</a>
+        <a href="#writing" data-nav>Writing</a>
+        <a href="#speaking" data-nav>Speaking</a>
+        <a href="#about" data-nav>About</a>
+        <a href="#contact" class="nav__cta">Work with me</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <!-- Mobile menu overlay -->
+    <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+      <nav class="menu-overlay__nav" aria-label="Mobile">
+        <a href="#work" data-nav-mobile><span>01</span>Work</a>
+        <a href="#video" data-nav-mobile><span>02</span>Video</a>
+        <a href="#writing" data-nav-mobile><span>03</span>Writing</a>
+        <a href="#speaking" data-nav-mobile><span>04</span>Speaking</a>
+        <a href="#about" data-nav-mobile><span>05</span>About</a>
+        <a href="#contact" data-nav-mobile><span>06</span>Work with me</a>
+      </nav>
+    </div>
+
+    <main id="view"></main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

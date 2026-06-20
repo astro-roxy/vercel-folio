@@ -1,0 +1,121 @@
+/* ============ Buttons & links ============ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 1.7rem;
+  border-radius: 100px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  border: 1px solid var(--line-strong);
+  color: var(--text);
+  transition: background 0.4s var(--ease-out), color 0.4s, border-color 0.4s,
+    transform 0.4s var(--ease-out), box-shadow 0.4s;
+  will-change: transform;
+}
+.btn--primary {
+  background: #fff;
+  color: var(--bg);
+  border-color: #fff;
+}
+.btn--primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px -10px rgba(255, 255, 255, 0.45);
+}
+.btn--ghost:hover {
+  border-color: #fff;
+  color: #fff;
+}
+.btn__arrow {
+  transition: transform 0.4s var(--ease-out);
+}
+.btn:hover .btn__arrow {
+  transform: translate(3px, -3px);
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--muted);
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s, border-color 0.3s;
+}
+.text-link:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+/* ============ Tag / chip ============ */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.95rem;
+  border-radius: 100px;
+  border: 1px solid var(--line);
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  background: var(--paper);
+}
+
+/* ============ Marquee ============ */
+.marquee {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 1.6rem 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+.marquee__track {
+  display: flex;
+  gap: 3.5rem;
+  width: max-content;
+  animation: marquee 38s linear infinite;
+}
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+.marquee__item {
+  font-family: var(--serif);
+  font-size: clamp(1.3rem, 2.4vw, 2.1rem);
+  color: var(--muted);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+.marquee__item::after {
+  content: '✦';
+  color: var(--faint);
+  font-size: 0.7em;
+}
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+/* ============ Reveal primitives ============ */
+[data-reveal] {
+  opacity: 0;
+}
+[data-reveal-line] {
+  display: block;
+  overflow: hidden;
+}
+[data-reveal-line] > span {
+  display: block;
+}
+html:not(.js) [data-reveal] {
+  opacity: 1;
+  transform: none;
+}
+html:not(.js) [data-reveal-line] > span {
+  transform: none;
+}
+html:not(.js) .preloader {
+  display: none;
+}

@@ -1,0 +1,17 @@
+<!-- TODO: replace with Rashmi's real portrait (portrait.jpg/webp). Light-theme placeholder. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 900">
+  <defs>
+    <linearGradient id="p" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#eceae5"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="900" fill="url(#p)"/>
+  <g fill="none" stroke="#0c0c0d" stroke-opacity="0.55" stroke-width="2">
+    <circle cx="360" cy="320" r="120"/>
+    <ellipse cx="360" cy="320" rx="210" ry="70" transform="rotate(-20 360 320)"/>
+  </g>
+  <circle cx="360" cy="320" r="52" fill="#0c0c0d"/>
+  <text x="360" y="560" text-anchor="middle" font-family="Georgia, serif" font-size="40" fill="#0c0c0d">Rashmi</text>
+  <text x="360" y="610" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" letter-spacing="4" fill="#86868d">PORTRAIT — TBA</text>
+</svg>

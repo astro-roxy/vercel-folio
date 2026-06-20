@@ -1,0 +1,52 @@
+:root {
+  /* ---- Color (Dark Cosmos) ---- */
+  --bg: #07070a;            /* deep space */
+  --bg-2: #0b0b10;          /* panel band */
+  --paper: rgba(255, 255, 255, 0.03);
+  --panel: rgba(255, 255, 255, 0.03);
+  --panel-2: #0b0b10;
+  --line: rgba(255, 255, 255, 0.12);
+  --line-strong: rgba(255, 255, 255, 0.28);
+
+  --ink: #ffffff;
+  --accent: #ffffff;
+
+  /* Legacy accent names remapped so existing rules stay valid. */
+  --cyan: rgba(255, 255, 255, 0.7);
+  --violet: rgba(180, 188, 220, 0.8);
+  --gold: #ffffff;
+  --gold-soft: #e7e7ee;
+
+  --text: #ffffff;
+  --muted: rgba(255, 255, 255, 0.68);
+  --faint: rgba(255, 255, 255, 0.45);
+
+  /* ---- Type ---- */
+  --serif: 'Zodiak', 'Noto Serif Devanagari', Georgia, 'Times New Roman', serif;
+  --sans: 'Satoshi', ui-sans-serif, system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+  --deva: 'Noto Serif Devanagari', 'Zodiak', serif;
+
+  /* fluid type scale */
+  --fs-hero: clamp(3rem, 7vw, 6.6rem);
+  --fs-display: clamp(2.6rem, 6vw, 5.4rem);
+  --fs-h2: clamp(2.2rem, 4.6vw, 3.8rem);
+  --fs-h3: clamp(1.3rem, 2.2vw, 1.9rem);
+  --fs-lead: clamp(1.05rem, 1.5vw, 1.35rem);
+  --fs-body: clamp(1rem, 1.15vw, 1.12rem);
+  --fs-sm: 0.9rem;
+  --fs-label: 0.74rem;
+
+  /* ---- Space & motion ---- */
+  --section-pad: clamp(3.4rem, 7vw, 6rem);
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --maxw: 1240px;
+  --radius: 18px;
+  --radius-sm: 12px;
+
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  --shadow-strong: 0 24px 70px rgba(0, 0, 0, 0.55);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-inout: cubic-bezier(0.76, 0, 0.24, 1);
+  --dur: 0.7s;
+}

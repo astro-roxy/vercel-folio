@@ -1,0 +1,21 @@
+{
+  "name": "astro-roxy-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "One-page portfolio for Rashmi (Astro Roxy) — astronomer & science communicator",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "shots": "node scripts/shots.mjs"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.13"
+  },
+  "devDependencies": {
+    "puppeteer": "^23.6.0",
+    "vite": "^5.4.10"
+  }
+}
