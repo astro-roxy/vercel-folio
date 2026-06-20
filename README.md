@@ -1,50 +1,23 @@
-# Astro Roxy — Portfolio
+# Astro Roxy — gallery + about update
 
-A one-page portfolio for **Rashmi "Astro Roxy" Sheoran** — astronomer & science communicator
-(Nuremberg, Germany). Clean black-and-white editorial theme so her colourful video thumbnails
-lead the page. Built with Vite, GSAP (ScrollTrigger) and Lenis smooth scroll.
+Every file here is a **direct replacement** — same paths as your repo. Copy them over.
 
-## Develop
+## Files to overwrite
+- `index.html`                  — adds the Caveat font
+- `src/data/content.js`         — new 16-photo `gallery` array
+- `src/sections/gallery.js`     — pinned-wall renderer
+- `src/sections/about.js`       — portrait swap + quick-facts strip
+- `src/styles/sections.css`     — full file, gallery + about blocks updated
 
-```bash
-npm install
-npm run dev        # http://localhost:5173
-```
+## Images
+Copy the 17 files in `public/assets/gallery/` into your repo's
+`public/assets/gallery/`.
 
-## Build & preview
+Then `npm run dev`.
 
-```bash
-npm run build      # outputs to dist/
-npm run preview
-```
+### Adding more photos later
+Drop a file into `public/assets/gallery/` and add one line to the `gallery`
+array in `content.js`. The collage reflows and the tilt/pin colours stay varied.
 
-## Verify (headless Chrome)
-
-```bash
-npm run dev        # in one terminal
-npm run shots      # screenshots desktop + mobile to shots/, reports console errors
-```
-
-## Deploy (GitHub → Vercel)
-
-1. Push this repo to GitHub.
-2. Import it in Vercel. Framework preset **Vite** is auto-detected (`vercel.json` is included):
-   build `npm run build`, output `dist`.
-3. Done — it's a static one-pager, no SPA rewrite needed.
-
-## Structure
-
-- `index.html` — shell: fixed WebGL `<canvas>`, grain/vignette overlays, nav, preloader.
-- `src/data/content.js` — **single source of truth** for all copy & links. Edit here.
-- `src/three/` — `space.js` (scene + parallax star layers) and `celestial.js` (the centerpiece).
-- `src/core/` — `lenis.js`, `nav.js`, `cursor.js`, `reveals.js`.
-- `src/sections/` — one module per section, rendered into `#view` by `src/main.js`.
-- `src/styles/` — `tokens.css` (design tokens), `base`, `layout`, `components`, `sections`.
-
-## TODO / assets to supply
-
-- Replace `public/assets/portrait.svg` with a real portrait (`portrait.jpg`/`.webp`) and update the
-  `<img>` in `src/sections/hero.js`.
-- Video cover images live in `public/assets/thumbs/` (pulled from the original site). To add/replace a
-  card, drop a 9:16 image there and point its `thumb` field in `videoGroups` (`content.js`) at it. Items
-  with no `thumb` render as text links (e.g. the YouTube "Films & guides").
+The old `astrocamp.jpg / live-show.jpg / …` files are no longer referenced —
+delete them or leave them, your call.

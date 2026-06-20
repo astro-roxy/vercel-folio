@@ -17,10 +17,18 @@ export function renderAbout() {
     </div>
 
     <div class="about-grid">
-      <div class="about__note">${note}</div>
+      <div class="about__note">
+        ${note}
+        <div class="about__facts" data-reveal>
+          <div><span>Based in</span><b>${profile.location}</b></div>
+          <div><span>Currently</span><b>MSc Science Communication</b></div>
+          <div><span>Working in</span><b>Video · Writing · Talks</b></div>
+        </div>
+      </div>
       <div class="about__side">
         <figure class="about__portrait" data-reveal>
-          <img src="/assets/portrait.svg" alt="Portrait of Rashmi (Astro Roxy)" width="720" height="900" />
+          <img src="/assets/gallery/p01-about.jpg" alt="Portrait of Rashmi (Astro Roxy)" loading="lazy" />
+          <figcaption>Rashmi — Astro Roxy</figcaption>
         </figure>
         <div class="about__trilingual" data-reveal>
           <div class="deva">${langs}</div>

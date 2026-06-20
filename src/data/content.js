@@ -177,15 +177,26 @@ export const volunteer = [
 ]
 
 // ---- Gallery ("In the field") ----------------------------------------------
-// Drop real photos into /public/assets/gallery and set `src`. Until then the
-// tile shows its caption as a placeholder. `span` = grid column span (1 or 2).
+// A pinned-wall collage. Photos live in /public/assets/gallery and show fully
+// (no crop). Add or remove entries freely — the CSS columns layout reflows and
+// the :nth-child rules keep the tilt + pin colours varied.
 export const gallery = [
-  { src: '', caption: 'Astrocamp · hill stations', span: 2, rows: 2 },
-  { src: '', caption: 'Live science show · Kalam Labs', span: 2, rows: 1 },
-  { src: '', caption: 'KGBV classroom', span: 1, rows: 1 },
-  { src: '', caption: 'Stargazing night', span: 1, rows: 1 },
-  { src: '', caption: 'Studio / streaming', span: 2, rows: 1 },
-  { src: '', caption: 'Observatory · Hanle, Ladakh', span: 2, rows: 1 },
+  { src: '/assets/gallery/p11.jpg', caption: 'Astrocamp · hill stations' },
+  { src: '/assets/gallery/p01.jpg', caption: 'Live show · Kalam Labs' },
+  { src: '/assets/gallery/p13.jpg', caption: 'Comet & the Milky Way' },
+  { src: '/assets/gallery/p17.jpg', caption: 'KGBV classroom' },
+  { src: '/assets/gallery/p02.jpg', caption: 'Total lunar eclipse · 2025' },
+  { src: '/assets/gallery/p22.jpg', caption: 'Hanle · Ladakh' },
+  { src: '/assets/gallery/p16.jpg', caption: 'Studio / streaming' },
+  { src: '/assets/gallery/p27.jpg', caption: 'The Moon' },
+  { src: '/assets/gallery/p10.jpg', caption: 'Sky Conclave · Corbett' },
+  { src: '/assets/gallery/p20.jpg', caption: 'On stage' },
+  { src: '/assets/gallery/p04.jpg', caption: 'Under the Milky Way' },
+  { src: '/assets/gallery/p07.jpg', caption: 'Globe sessions' },
+  { src: '/assets/gallery/p24.jpg', caption: 'Orion Nebula' },
+  { src: '/assets/gallery/p09.jpg', caption: 'Eclipse at sunset' },
+  { src: '/assets/gallery/p25.jpg', caption: 'Panel · planetarium' },
+  { src: '/assets/gallery/p14.jpg', caption: 'Solar observing' },
 ]
 
 // `items` render as image cards (each has a real thumbnail). `links` render as

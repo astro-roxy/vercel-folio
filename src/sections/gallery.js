@@ -1,18 +1,18 @@
 import { gallery } from '../data/content.js'
 import { line } from '../core/reveals.js'
 
-// "In the field" — a curated mosaic. Each tile shows a real photo when `src`
-// is set in content.js; until then it shows its caption as a labelled placeholder.
+// "In the field" — a pinned-wall collage. Each photo shows fully (no crop),
+// in a print-style frame with a pushpin and a slight tilt. Rotation + pin
+// colour cycle is handled in CSS via :nth-child, so this stays clean.
 export function renderGallery() {
   const tiles = gallery
-    .map((g) => {
-      const span = `--span:${g.span || 1};--rows:${g.rows || 1};`
-      const inner = g.src
-        ? `<img src="${g.src}" alt="${g.caption}" loading="lazy" /><span class="tile__cap tile__cap--over">${g.caption}</span>`
-        : `<span class="tile__cap">${g.caption}</span>`
-      const cls = g.src ? 'tile tile--filled' : 'tile tile--empty'
-      return `<figure class="${cls}" style="${span}" data-reveal>${inner}</figure>`
-    })
+    .map(
+      (g) => `
+      <figure class="tile" data-reveal>
+        <img src="${g.src}" alt="${g.caption}" loading="lazy" />
+        <figcaption class="tile__cap">${g.caption}</figcaption>
+      </figure>`
+    )
     .join('')
 
   return `
